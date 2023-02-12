@@ -1,0 +1,24 @@
+name: SocialConclave
+channels:
+  - conda-forge
+dependencies:
+  - django=4.0
+  - asgiref==3.4.1
+  - charset-normalizer==2.0.11
+  - defusedxml==0.7.1
+  - diff-match-patch==20200713
+  - dj-database-url==0.5.0
+  - django-crispy-forms==1.13.0
+  - django-extensions==3.1.5
+  - django-heroku==0.3.1
+  - django-import-export==2.7.1
+  - gunicorn==20.1.0
+  - idna==3.3
+  - openpyxl==3.0.9
+  - phonenumbers==8.12.40
+  - requests==2.27.1
+  - sqlparse==0.4.2
+  - tablib==3.1.0
+  - urllib3==1.26.8
+  - whitenoise==5.3.0
+prefix: /opt/homebrew/Caskroom/mambaforge/base/envs/SocialConclave

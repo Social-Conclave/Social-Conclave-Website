@@ -1,0 +1,717 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Our Team | Social Conclave</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/overTheYears.css' %}" />
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+</head>
+
+<body class="overTheYears" id="top">
+
+    <!-- Header -->
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="{% url 'main:landing-page' %}">
+                <div class="headlinelogo">
+                    <canvas id="headlinelogocanvas"></canvas>
+                    <img class="scEarth" src="{% static 'images/earthRing.png' %}" alt="Social Impact Logo" />
+                </div>
+                <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
+            </a>
+        </div>
+        <!-- PC Nav -->
+        <nav id="bigone" class="header-nav1">
+            <div class="header-nav__content1">
+                <ul class="header-nav__list">
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <!-- <li class="current"><a class="smoothscroll" href="#superCoreTeam" title="our team">Our Team</a></li> -->
+                </ul>
+            </div>
+        </nav>
+        <!-- /PC Nav -->
+        <!-- Mobile Nav -->
+        <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </nav>
+        <!-- /Mobile Nav -->
+    </header>
+    <!-- /Header -->
+
+    <!-- Mobile Menu -->
+    <div id="myNav" class="ov">
+        <div class="ov-content">
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <!-- <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our
+                Team</a> -->
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+    <section id="home" class="s-home target-section short-header" data-parallax="scroll"
+        data-image-src="{% static 'images/Sky Bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+        data-position-y="center">
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+        <div class="home-content">
+            <div class="row home-content__main extrapad">
+                <h3>Social Conclave</h3>
+                <br>
+                <h1 style="margin-bottom: 0px">
+                    Our Team
+                </h1>
+                <div class="home-content__buttons">
+                    <a href="{% url 'main:landing-page' %}" class="btn btn--stroke">Home</a>
+                </div>
+            </div>
+            <div class="home-content__line"></div>
+        </div>
+        <ul class="home-social">
+            <li>
+                <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                        aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                        aria-hidden="true"></i><span>Twitter</span></a>
+            </li>
+            <li>
+                <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                        aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                        aria-hidden="true"></i><span>LinkedIn</span></a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="superCoreTeam" class="s-services">
+        <div class="provide" id="teamsId">
+            <div class="header">
+                <span>Our Team</span>
+                <h2>Super Core Conclave 2021</h2>
+                <p>
+                    We at Conclave believe in doing our bit to bring about a big change one problem at a time
+                </p>
+            </div>
+            <div class="team2021">
+                <div class="supercore">
+                    <div class="sc-block">
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/sclogo.png' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    President:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Ishaan<br>Shetty
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    <p>
+                                        “If you get up in the morning and think the future is going to be better, it is
+                                        a bright day. Otherwise, it's not.” - Elon Musk.
+                                    </p>
+                                    <p>
+                                        Ishaan Shetty, our President for the Social Conclave this year, is a bright
+                                        personality with tremendous knowledge and the most diligent person we have ever
+                                        met. He is a one-of-a-kind individual with exceptional leadership abilities. He
+                                        possesses all the positive characteristics an individual can. He is a gem of a
+                                        person who consistently assists us in overcoming various challenges. He is a man
+                                        of few words, but they are honest words. He is unquestionably a well-informed
+                                        and witty individual who excels at his job.
+                                    </p>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-block">
+
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/sclogo.png' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Poorva<br>Chadha
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    <p>
+                                        “Live life to the fullest. You have to color outside the lines. Once in a while,
+                                        if you want to make your life a masterpiece.” - Albert Einstein
+                                    </p>
+                                    <p>
+                                        Poorva always has something to say on the topic at hand that is worth listening
+                                        to. She is unconcerned carefree about the minor details of life, but she
+                                        recognizes when an issue deserves her whole attention. Her upbeat demeanor lets
+                                        everyone know that they can come to her with whatever problems they may be
+                                        having. She knows how to say exactly what she's thinking to anybody she's
+                                        speaking with, and she knows how to encourage people to work together. Her most
+                                        enticing feature, aside from the fact that she is approachable, is her casual
+                                        nature; she is quite charming. She excels not only in her academics but also in
+                                        her extracurricular activities. As a result, she is a fantastic leader. It's an
+                                        honor to have her as one of our Social Conclave Chairpersons this year.
+                                    </p>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-block">
+
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/sclogo.png' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Shubh<br>Mehta
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    <p>
+                                        “The only place where success comes before work is in the dictionary.” ~ Vidal
+                                        Sassoon
+                                    </p>
+                                    <p>
+                                        If we were to describe Shubh in a word... well we wouldn't be able to possibly
+                                        do that. He's the embodiment of leadership, integrity, decisiveness, and a
+                                        million other quintessential qualities. He's an ardent go-getter who stands tall
+                                        in support of his team and makes sure everything runs well. His strength and
+                                        unmatchable energy is the fuel on which Social Conclave runs, and he's proven
+                                        that time and again. He's a determined hard-worker and is always ready to
+                                        overcome any obstacles that come in his way. Humble beyond measure with an
+                                        effortless confidence, the man oozes charisma. His extensive range of skills and
+                                        experience is an added asset. It's an honor to have him as one of our Social
+                                        Conclave Chairpersons this year.
+                                    </p>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-block">
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/sclogo.png' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Vice President:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Parv<br>Dave
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    <p>
+                                        “Success isn’t always about greatness. It’s about consistency. Consistent hard
+                                        work leads to success. Greatness will come.” -Dwayne Johnson
+                                    </p>
+                                    <p>
+                                        Parv has always been an all rounder. His devotion to improving himself in all
+                                        aspects of life has defined him as an overachiever among his peers. Every
+                                        project he works on has his signature mark of success. He is determined to
+                                        always give 100% of his efforts no matter the task at hand. Leading by example
+                                        is something we can always expect from Parv. His co-workers know they can always
+                                        depend on him to deliver phenomenal results consistently. We are extremely happy
+                                        having him as our Vice President for Conclave this year.
+                                    </p>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-block">
+
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/sclogo.png' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Vice President:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Arjun<br>Warrier
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    <p>
+                                        “Fight for the things that you care about. But do it in a way that will lead
+                                        others to join you” -Ruth Bader Ginsberg
+                                    </p>
+                                    <p>
+                                        Staying true to his name, Arjun always fights for what he believes in. He’s
+                                        extremely passionate about the topics of our agenda but also sympathetic for the
+                                        people he’s talking to. He always has a fresh perspective on boring subjects and
+                                        makes sure to present it in his unique style. He projects an aura of confidence
+                                        whenever he speaks like any proficient leader. He’s very eager to lead the
+                                        change the world needs and we’re all here to support him. It’s a pleasure to
+                                        have Arjun as our Vice President on the Social Conclave team.
+                                    </p>
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="sc-block">
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/sclogo.png' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Vice Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Keith<br>Fernandes
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    <p>
+                                        “The purpose of our lives is to be happy” -Dalai Lama
+                                    </p>
+                                    <p>
+                                        Keith is an incredibly joyful person, and he makes everyone around him feel
+                                        optimistic no matter how tense the circumstances may be. His goal is to cause a
+                                        positive influence to the world through his actions, no matter how small it may
+                                        be. He recognizes the far-reaching impact of his actions on the people around
+                                        him and always acts responsibly. He seems to bring a fresh perspective to the
+                                        table for every subject and keeps the conversation lively. We feel great having
+                                        him as Social Conclave’s Vice Chairperson.
+                                    </p>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-block">
+
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/sclogo.png' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Vice Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Tanya<br>Kulkarni
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    <p>
+                                        “Always remember you are absolutely unique, just like everyone else” - Margaret
+                                        Mead
+                                    </p>
+                                    <p>
+                                        Talented and tactful, that's Tanya for you. She's the one who will help you out
+                                        no matter what, and be patient and cheerful in the toughest of situations. With
+                                        a personality synonymous with excellence and a heart of gold, she stands strong
+                                        as one of the pillars of support in Social Conclave. She's free-spirited, highly
+                                        goal-oriented and strives for perfection in every task she undertakes.
+                                        Confidence and charm come to her with a striking nonchalance.Tanya's experience,
+                                        blended with her creative and artistic persona never fails to amuse us. A beacon
+                                        of all good things - her versatile personality and innate zest for learning is
+                                        what makes her a great leader. We're more than excited to have her as our vice
+                                        chairperson this year!
+                                    </p>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="sc-block">
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/team/supercore/Harsh.webp' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Vice Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Harsh<br>Gawade
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    <p>
+                                        “Preparedness and punctuality are the two most important qualities of a leader.”
+                                        John Andreas Widtsoe
+                                    </p>
+                                    <p>
+                                        Harsh’s brilliance in organizing everything and his utmost punctuality in
+                                        getting any work done, and done with perfection, makes him a person to look out
+                                        for, in Conclave or anywhere he leads. He has a surreal zeal in helping everyone
+                                        around him and knows the ins and outs on any occasion, thanks to his empirical
+                                        experience in Logistics throughout the years. His sheer excellence and integrity
+                                        is inspiring to one and all. As an honourable Vice Chairperson of Social
+                                        Conclave 2021, we can only imagine him taking the conference to a transcendent
+                                        level of success.
+                                    </p>
+                                </h3>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="coreTeam" class="s-services">
+        <div class="provide" id="teamsId">
+            <div class="header">
+                <span>Over Team</span>
+                <h2>Core Conclave 2021</h2>
+                <p>
+                    We at Conclave believe in doing our bit to bring about a big change one problem at a time
+                </p>
+            </div>
+
+            <section class="gridAbout">
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Admin">
+                        <img src="{% static 'images/departments/Admin.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Kartik Welling</h3>
+                        <span>Sub Head</span>
+                        <h3>Kairavi</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="AGM">
+                        <img src="{% static 'images/departments/AGM.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Juhi Patel<br>Vanshaj Ajmera</h3>
+                        <span>Sub Head</span>
+                        <h3>Aditya<br>Jeet<br>Shardul<br>Varun</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="DC">
+                        <img src="{% static 'images/departments/DC.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Shrinivas Malekar</h3>
+                        <span>Sub Head</span>
+                        <h3>Anjali<br>Mahir<br>Omkar<br>Shrey</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Hospitality">
+                        <img src="{% static 'images/departments/Hospitality.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Vidi Panwar<br>Sehaj Bhalla </h3>
+                        <span>Sub Head</span>
+                        <h3>Veer<br>Pal<br>Nitish<br>Aishwarya</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="IHC">
+                        <img src="{% static 'images/departments/IHC.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Khushi C</h3>
+                        <span>Sub Head</span>
+                        <h3>Amishi<br>Srishty<br>Sanchi<br>Khadija</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Informals">
+                        <img src="{% static 'images/departments/Informals.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Dhruv Gaba<br>Siddhant Badola</h3>
+                        <span>Sub Head</span>
+                        <h3>Rishita<br>Arushi<br>Frania<br>Aaditya</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Logistics">
+                        <img src="{% static 'images/departments/Logistics.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Arfat Sheikh<br>Rusik</h3>
+                        <span>Sub Head</span>
+                        <h3>Dhanish<br>Jugal<br>Renesh<br>Tanishq</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Marketing">
+                        <img src="{% static 'images/departments/Marketing.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Hetvi Hirani<br>Jai Yadav</h3>
+                        <span>Sub Head</span>
+                        <h3>Kairav<br>Khushank<br>Shanaya<br>Khushi</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Photography">
+                        <img src="{% static 'images/departments/Photography.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Parth Tendulkar<br>Priyam Shah</h3>
+                        <span>Sub Head</span>
+                        <h3>Ananya<br>Krishna<br>Nirav<br>Kesar</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Publicity">
+                        <img src="{% static 'images/departments/Publicity.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Sunandan Dasgupta</h3>
+                        <span>Sub Head</span>
+                        <h3>Aashir<br>Ananya<br>Advait<br>Siddhi</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="R&D">
+                        <img src="{% static 'images/departments/RnD.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Akshat Dahiya<br>Arushi Rai</h3>
+                        <span>Sub Head</span>
+                        <h3>Reneeka<br>Anushka<br>Swiya<br>Sameer</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="SMCW">
+                        <img src="{% static 'images/departments/SMCW.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Tvisha Modi</h3>
+                        <span>Sub Head</span>
+                        <h3>Sachi<br>Tanisha<br>Durva<br>Mehek<br>Kruttika</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Technical">
+                        <img src="{% static 'images/departments/Tech.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Vrushit Patel<br>Harshit Sharma</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row footer-main">
+            <div class="col-four tab-full left footer-subscribe">
+                <h4>Let's talk about</h4>
+                <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
+                <ul class="contact-social">
+                    <li>
+                        <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-three tab-full right footer-desc">
+                <div class="footer-log"></div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-five tab-full right footer-subscribe">
+                <h4>Have any questions?</h4>
+
+                <div class="cinfo-footer">
+                    <h5>SUNANDAN DASGUPTA</h5>
+                    <p>
+                        <a href="tel:+919820934218">+91-9820934218</a><br>
+                        <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class=" row footer-bottom">
+            <div class="col-twelve">
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!--Preloader-->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
+        </div>
+    </div>
+    <!--Preloader-->
+
+    <script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
+    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+    <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"
+        integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
+    <script src="{% static 'js/earth.js' %}"></script>
+
+    <script>
+        function CardClick(thisCard) {
+            allcards = document.getElementsByClassName("card");
+            for (let i = 0; i < allcards.length; i++) {
+                allcards[i].classList.remove("active");
+            }
+            thisCard.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

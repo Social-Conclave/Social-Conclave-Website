@@ -1,0 +1,89 @@
+.row {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.s-services {
+  padding-bottom: 0;
+}
+
+#AgendasDetails {
+  padding-top: 0;
+  padding-bottom: 9rem;
+}
+
+#AgendasDetails img {
+  width: 65px;
+  display: block;
+}
+
+.flexheader {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+#AgendasDetails h2 {
+  font-size: 3rem;
+  display: block;
+  line-height: 1.15;
+  color: #000;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.1rem;
+  margin-top: 0.6rem;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-family: montserrat-medium, sans-serif;
+}
+
+#AgendasDetails p {
+  font-size: 2rem;
+  display: block;
+  line-height: 1.15;
+  color: #363636;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0rem;
+  margin-top: 2.5rem;
+  font-style: normal;
+  text-align: justify;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  font-family: montserrat, sans-serif;
+}
+
+.home-content__buttons .btn {
+  padding: 1.7rem 0.75rem !important;
+}
+
+.col-sm-6 {
+  padding: 25px !important;
+}
+
+.col-sm-6:nth-child(3) {
+  border-top: 1px solid grey;
+}
+.col-sm-6:nth-child(4) {
+  border-top: 1px solid grey;
+}
+
+.col-sm-6:nth-child(2) {
+  border-left: 1px solid grey;
+}
+
+.col-sm-6:nth-child(4) {
+  border-left: 1px solid grey;
+}
+
+a:focus,
+a:hover {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+@media only screen and (max-width: 770px) {
+  .col-sm-6 {
+    border: none !important;
+  }
+}
