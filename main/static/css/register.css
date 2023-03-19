@@ -67,7 +67,6 @@ body .success p {
 }
 body p {
   color: #5b5e6f;
-  font-size: 10px;
   text-align: left;
 }
 body .testtwo {
@@ -218,7 +217,7 @@ body .login_fields textarea {
   display: block;
   margin-bottom: 2rem;
 }
-#div_id_team{
+#div_id_team {
   display: none;
 }
 
@@ -399,7 +398,7 @@ input[type="checkbox"]:checked:after {
 #div_id_topicPref2 > div,
 #div_id_topicPref3 > div,
 #div_id_teamyn > div,
-#div_id_mumbai > div{
+#div_id_mumbai > div {
   color: #afb1be;
   width: 90%;
   margin: 0 auto;
