@@ -1,0 +1,87 @@
+{% load static %}
+
+<!-- Header -->
+<header class="s-header">
+  <div class="header-logo">
+    <a class="site-logo" href="{% url 'main:landing-page' %}">
+      <div class="headlinelogo">
+        <canvas id="headlinelogocanvas"></canvas>
+        <img
+          class="scEarth"
+          src="{% static 'images/earthRing.png' %}"
+          alt="Social Impact Logo"
+        />
+      </div>
+      <img
+        class="scLogotxt"
+        src="{% static 'images/socialconclave.png' %}"
+        alt="Homepage"
+      />
+    </a>
+  </div>
+  <!-- PC Nav -->
+  <nav id="bigone" class="header-nav1">
+    <div class="header-nav__content1">
+      <ul class="header-nav__list">
+        <li class="current">
+          <a href="#home" title="home">Home</a>
+        </li>
+        <li>
+          <a href="#about" title="about">About Us</a>
+        </li>
+        <li>
+          <a href="#blogs" title="blogs">Blogs</a>
+        </li>
+        <!--<li><a  href="#works" title="works">Glimpse</a></li>-->
+        <li>
+          <a href="#clients" title="Affiliations">Affiliations</a>
+        </li>
+        <li>
+          <a
+            href="https://socialconclave.in/register"
+            target="_blank"
+            title="register"
+            >Register</a
+          >
+        </li>
+        <li>
+          <a href="#contact" title="contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /PC Nav -->
+  <!-- Mobile Nav -->
+  <nav id="smallone" class="con" style="float: right" onclick="myFunction();">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </nav>
+  <!-- /Mobile Nav -->
+</header>
+<!-- /Header -->
+
+<!-- Mobile Menu -->
+<div id="myNav" class="ov">
+  <div class="ov-content">
+    <a href="/" title="home" onclick="myFunction();">Home</a>
+    <a href="/team" title="about" onclick="myFunction();">About Us</a>
+    <a href="#blog" title="blogs" onclick="myFunction();">Blogs</a>
+    <a href="#clients" title="clients" onclick="myFunction();">Affiliations</a>
+    <a
+      href="https://socialconclave.in/register"
+      target="_blank"
+      title="register"
+      onclick="myFunction();"
+      >Register</a
+    >
+    <a
+      class="smoothscroll"
+      href="#contact"
+      title="contact"
+      onclick="myFunction();"
+      >Contact</a
+    >
+  </div>
+</div>
+<!-- /Mobile Menu -->

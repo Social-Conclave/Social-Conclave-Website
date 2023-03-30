@@ -66,136 +66,10 @@
         }
       }
     </style>
-
-    <!-- Start of Async Callbell Code -->
-    <!-- <script>
-      window.callbellSettings = {
-        token: "qxpggxWQxMR9J5LngVy6DjB4"
-      };
-    </script>
-    <script>
-      (function(){var w=window;var ic=w.callbell;if(typeof ic==="function"){ic('reattach_activator');ic('update',callbellSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Callbell=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://dash.callbell.eu/include/'+window.callbellSettings.token+'.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
-    </script> -->
-    <!-- End of Async Callbell Code -->
   </head>
 
   <body id="top">
-    <!-- Header -->
-    <header class="s-header">
-      <div class="header-logo">
-        <a class="site-logo" href="{% url 'main:landing-page' %}">
-          <div class="headlinelogo">
-            <canvas id="headlinelogocanvas"></canvas>
-            <img
-              class="scEarth"
-              src="{% static 'images/earthRing.png' %}"
-              alt="Social Impact Logo"
-            />
-          </div>
-          <img
-            class="scLogotxt"
-            src="{% static 'images/socialconclave.png' %}"
-            alt="Homepage"
-          />
-        </a>
-      </div>
-      <!-- PC Nav -->
-      <nav id="bigone" class="header-nav1">
-        <div class="header-nav__content1">
-          <ul class="header-nav__list">
-            <li class="current">
-              <a class="smoothscroll" href="#home" title="home">Home</a>
-            </li>
-            <li>
-              <a class="smoothscroll" href="#about" title="about">About Us</a>
-            </li>
-            <!-- <li><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li> -->
-            <li>
-              <a class="smoothscroll" href="#blogs" title="blogs">Blogs</a>
-            </li>
-            <!--<li><a class="smoothscroll" href="#works" title="works">Glimpse</a></li>-->
-            <li>
-              <a class="smoothscroll" href="#clients" title="Affiliations"
-                >Affiliations</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://socialconclave.in/register"
-                target="_blank"
-                title="register"
-                >Register</a
-              >
-            </li>
-            <li>
-              <a class="smoothscroll" href="#contact" title="contact"
-                >Contact Us</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- /PC Nav -->
-      <!-- Mobile Nav -->
-      <nav
-        id="smallone"
-        class="con"
-        style="float: right"
-        onclick="myFunction();"
-      >
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </nav>
-      <!-- /Mobile Nav -->
-    </header>
-    <!-- /Header -->
-
-    <!-- Mobile Menu -->
-    <div id="myNav" class="ov">
-      <div class="ov-content">
-        <a
-          class="smoothscroll"
-          href="#home"
-          title="home"
-          onclick="myFunction();"
-          >Home</a
-        >
-        <a href="#about" title="about" onclick="myFunction();">About Us</a>
-        <a
-          class="smoothscroll"
-          href="#blog"
-          title="blogs"
-          onclick="myFunction();"
-          >Blogs</a
-        >
-        <a
-          class="smoothscroll"
-          href="#clients"
-          title="clients"
-          onclick="myFunction();"
-          >Affiliations</a
-        >
-        <!-- <a href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a> -->
-        <a
-          class="smoothscroll"
-          href="https://socialconclave.in/register"
-          target="_blank"
-          title="register"
-          onclick="myFunction();"
-          >Register</a
-        >
-        <a
-          class="smoothscroll"
-          href="#contact"
-          title="contact"
-          onclick="myFunction();"
-          >Contact</a
-        >
-      </div>
-    </div>
-    <!-- /Mobile Menu -->
-
+    {% include '../components/navbar.html' %}
     <!-- Slide1: Home -->
     <section
       id="home"
@@ -224,7 +98,7 @@
             >
               Register
             </a>
-            <a href="{% url 'core:agendas' %}" class="btn btn--stroke">
+            <a href="{% url 'main:agendas' %}" class="btn btn--stroke">
               Agendas
             </a>
           </div>
@@ -276,7 +150,7 @@
           </p>
         </div>
         <div class="home-content__buttons" style="text-align: center">
-          <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
+          <a href="{% url 'main:team' %}" class="btn btn--stroke">
             Meet Our Team
           </a>
         </div>
@@ -587,33 +461,47 @@
         </div>
       </div>
 
-      
-
       <div class="row clients-testimonials" data-aos="fade-up">
         <div class="col-full">
           <h3 class="subhead testi">CONDUCT</h3>
           <div class="testimonials">
-            <div class="testimonials__slide" style="text-align: left;">
+            <div class="testimonials__slide" style="text-align: left">
               <p>
-                - Delegates are expected to prepare adequately for active participation in committee sessions.<br>
-                - Delegates found to be in violation of Social Conclave’s policies may be barred from further participation at Social Conclave and/or expelled from the conference without refund at the discretion of the Chairperson.<br>
-                - Delegates who disrupt committee sessions or other conference events may be barred from further participation at Social Conclave and/or expelled from the conference without refund at the discretion of the Chairperson.<br>
-                - Delegates who antagonize fellow participants or otherwise “disturb the peace” may be barred from further participation at Social Conclave and/or expelled from the conference without refund at the discretion of the Chairperson.<br>
-                - The educational quality of Social Conclave is primarily dependent on all delegates’ active and professional participation.<br>
-                - SOCIAL CONCLAVE will not tolerate any instances of harassment or discrimination, including but not limited to those based on race, gender, sexual orientation, national origin, religion, age, or disability status. Further, Social Conclave will not tolerate any instances of inappropriate behaviour or unwelcome advances of a sexual nature.<br>
-                - Social Conclave 2023 will take place from March 31st March to April 1st, 2023. Social Conclave 2023 is unable to provide refunds to delegations/delegates that choose not to attend the conference or one or more of its events.<br>
+                - Delegates are expected to prepare adequately for active
+                participation in committee sessions.<br />
+                - Delegates found to be in violation of Social Conclave’s
+                policies may be barred from further participation at Social
+                Conclave and/or expelled from the conference without refund at
+                the discretion of the Chairperson.<br />
+                - Delegates who disrupt committee sessions or other conference
+                events may be barred from further participation at Social
+                Conclave and/or expelled from the conference without refund at
+                the discretion of the Chairperson.<br />
+                - Delegates who antagonize fellow participants or otherwise
+                “disturb the peace” may be barred from further participation at
+                Social Conclave and/or expelled from the conference without
+                refund at the discretion of the Chairperson.<br />
+                - The educational quality of Social Conclave is primarily
+                dependent on all delegates’ active and professional
+                participation.<br />
+                - SOCIAL CONCLAVE will not tolerate any instances of harassment
+                or discrimination, including but not limited to those based on
+                race, gender, sexual orientation, national origin, religion,
+                age, or disability status. Further, Social Conclave will not
+                tolerate any instances of inappropriate behaviour or unwelcome
+                advances of a sexual nature.<br />
+                - Social Conclave 2023 will take place from March 31st March to
+                April 1st, 2023. Social Conclave 2023 is unable to provide
+                refunds to delegations/delegates that choose not to attend the
+                conference or one or more of its events.<br />
               </p>
               <!-- <div class="testimonials__info">
                 <span class="testimonials__name"></span>
               </div> -->
             </div>
-           
-           
           </div>
         </div>
       </div>
-
-
     </section>
 
     <section id="contact" class="s-contact">
@@ -763,9 +651,8 @@
           <h4>Links</h4>
           <ul>
             <li><a class="smoothscroll" href="#home">Home</a></li>
-            <!-- <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li> -->
             <li>
-              <a href="{% url 'core:agendas' %}" title="agendas">Agendas</a>
+              <a href="{% url 'main:agendas' %}" title="agendas">Agendas</a>
             </li>
             <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
             <li><a class="smoothscroll" href="#contact">Contact Us</a></li>
