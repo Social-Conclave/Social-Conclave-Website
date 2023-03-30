@@ -12,3 +12,6 @@ def agendas(request):
 
 def overTheYears(request):
     return render(request, 'core/overTheYears.html')
+
+def EducationAUniversalRight(request):
+    return render(request, 'core/EducationAUniversalRight.html')
