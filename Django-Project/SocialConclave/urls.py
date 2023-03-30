@@ -16,14 +16,12 @@ Including another URLconf
 from . import settings
 from django.contrib import admin
 from django.urls import path, include
-from blogs import views as blog_views
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')),
-    path('blogs/', include('blogs.urls')),
+    path('', include('main.urls'))
 ]
 
 

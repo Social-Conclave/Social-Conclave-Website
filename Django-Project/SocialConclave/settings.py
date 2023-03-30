@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
-    'blogs.apps.BlogsConfig',
     'phonenumber_field',
     'crispy_forms',
     'import_export',

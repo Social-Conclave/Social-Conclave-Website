@@ -51,93 +51,8 @@
   </head>
 
   <body class="overTheYears" id="top">
-    <!-- Header -->
-    <header class="s-header">
-      <div class="header-logo">
-        <a class="site-logo" href="{% url 'main:landing-page' %}">
-          <div class="headlinelogo">
-            <canvas id="headlinelogocanvas"></canvas>
-            <img
-              class="scEarth"
-              src="{% static 'images/earthRing.png' %}"
-              alt="Social Impact Logo"
-            />
-          </div>
-          <img
-            class="scLogotxt"
-            src="{% static 'images/socialconclave.png' %}"
-            alt="Homepage"
-          />
-        </a>
-      </div>
-      <!-- PC Nav -->
-      <nav id="bigone" class="header-nav1">
-        <div class="header-nav__content1">
-          <ul class="header-nav__list">
-            <li>
-              <a href="{% url 'main:landing-page' %}" title="home">Home</a>
-            </li>
-            <li>
-              <a href="https://www.socialconclave.com/#about" title="about"
-                >About Us</a
-              >
-            </li>
-            <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
-            <li class="current">
-              <a class="smoothscroll" href="#superCoreTeam" title="our team"
-                >Our Team</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- /PC Nav -->
-      <!-- Mobile Nav -->
-      <nav
-        id="smallone"
-        class="con"
-        style="float: right"
-        onclick="myFunction();"
-      >
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </nav>
-      <!-- /Mobile Nav -->
-    </header>
-    <!-- /Header -->
-
-    <!-- Mobile Menu -->
-    <div id="myNav" class="ov">
-      <div class="ov-content">
-        <a
-          href="{% url 'main:landing-page' %}"
-          title="home"
-          onclick="myFunction();"
-          >Home</a
-        >
-        <a
-          href="https://www.socialconclave.com/#about"
-          title="about"
-          onclick="myFunction();"
-          >About Us</a
-        >
-        <a
-          href="{% url 'blogs:allblog' %}"
-          title="blogs"
-          onclick="myFunction();"
-          >Blog</a
-        >
-        <a
-          class="smoothscroll"
-          href="{% url 'main:team' %}"
-          title="our team"
-          onclick="myFunction();"
-          >Our Team</a
-        >
-      </div>
-    </div>
-    <!-- /Mobile Menu -->
+    <!-- Navbar -->
+    {% include '../components/navbar.html' %}
 
     <section
       id="home"
@@ -194,13 +109,6 @@
           were allowed to fully develop during their childhood can have a more
           positive impact on society.
         </div>
-        <!-- <div class="right">
-          <img
-            style="width: 300px"
-            src="{% static 'images/agendas23/Education.jpg' %}"
-            alt="Agenda related picture"
-          />
-        </div> -->
       </div>
     </section>
 
@@ -211,14 +119,14 @@
       >
     </section>
 
-    <section class="container" style="">
+    <section class="container">
       <h1>Presentation Template</h1>
       <a target="_blank" href="http://socialconclave.in/template/Education"
         >Click here to download</a
       >
     </section>
 
-    <section class="container" style="">
+    <section class="container">
       <h1>Report Template</h1>
       <a target="_blank" href="http://socialconclave.in/template/Report"
         >Click here to download</a
@@ -229,7 +137,7 @@
       class="field-visit container"
       style="margin-bottom: 75px; margin-top: 15px"
     >
-      <div style="">
+      <div>
         <div class="fv-info" style="margin-bottom: 15px">
           <h1>Field Visit</h1>
           Saira Mansion, <br />
@@ -253,125 +161,10 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="row footer-main">
-        <div class="col-four tab-full left footer-subscribe">
-          <h4>Have questions?</h4>
-          <p>Feel free to reach out to us! We're happy to discuss on it.</p>
-          <ul class="contact-social">
-            <li>
-              <a href="https://instagram.com/social.conclave"
-                ><i class="fab fa-instagram" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://wa.me/+919987729634"
-                ><i class="fab fa-whatsapp" aria-hidden="true"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-three tab-full right footer-desc">
-          <div class="footer-log"></div>
-          <h4>Links</h4>
-          <ul>
-            <li><a class="smoothscroll" href="#home">Home</a></li>
-            <li>
-              <a href="{% url 'main:agendas' %}" title="agendas">Agendas</a>
-            </li>
-            <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="col-five tab-full right footer-subscribe">
-          <!--  -->
-          <div class="cinfo-footer">
-            <h5>ADVAIT UDAYABHANU</h5>
-            <p><a href="tel:+919987729634">+91-9987729634</a><br /></p>
-          </div>
-          <div class="cinfo-footer">
-            <h5>AASHIR IBRAHIM</h5>
-            <p><a href="tel:+919769328926">+91-9769328926</a><br /></p>
-          </div>
-        </div>
-      </div>
-      <div class="row footer-bottom">
-        <div class="col-twelve">
-          <div class="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-              <i class="icon-arrow-up" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- /Footer -->
-
-    <!--Preloader-->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button
-              class="pswp__button pswp__button--close"
-              title="Close (Esc)"
-            ></button>
-            <button
-              class="pswp__button pswp__button--share"
-              title="Share"
-            ></button>
-            <button
-              class="pswp__button pswp__button--fs"
-              title="Toggle fullscreen"
-            ></button>
-            <button
-              class="pswp__button pswp__button--zoom"
-              title="Zoom in/out"
-            ></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
-          >
-            <div class="pswp__share-tooltip"></div>
-          </div>
-          <button
-            class="pswp__button pswp__button--arrow--left"
-            title="Previous (arrow left)"
-          ></button>
-          <button
-            class="pswp__button pswp__button--arrow--right"
-            title="Next (arrow right)"
-          ></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__center"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="preloader">
-      <div id="loader">
-        <div class="scpreloader">
-          <img src="{% static 'images/sclogo.png' %}" style="width: 200px" />
-        </div>
-      </div>
-    </div>
-    <!--Preloader-->
+    <!-- Navbar -->
+    {% include '../components/footer.html' %}
+    <!-- Preloader -->
+    {% include '../components/preloader.html' %}
 
     <script
       data-cfasync="false"

@@ -69,8 +69,10 @@
   </head>
 
   <body id="top">
+    <!-- Navbar -->
     {% include '../components/navbar.html' %}
-    <!-- Slide1: Home -->
+
+    <!-- Jumbotron -->
     <section
       id="home"
       class="s-home target-section"
@@ -86,7 +88,7 @@
         <div class="row home-content__main">
           <h3>Welcome to Social Conclave</h3>
           <h1 style="margin-bottom: 0px">
-            Together let us <br />BE THE CHANGE <br />by spreading smiles and
+            Together, let us <br />BE THE CHANGE <br />by spreading smiles and
             impacting lives,
           </h1>
           <h1 style="margin-top: 0px">ONE PROBLEM AT A TIME. <br /></h1>
@@ -123,14 +125,15 @@
         </li>
       </ul>
     </section>
-    <!-- /Slide1: Home -->
 
-    <!-- Slide2: About -->
+    <!-- About Us -->
     <section id="about" class="s-about">
       <div class="row section-header has-bottom-sep" data-aos="fade-up">
         <div class="col-full">
-          <h3 class="subhead subhead--dark" style="color: #222">Hello There</h3>
-          <h1 class="display-1 display-1--light">This is about us</h1>
+          <h3 class="subhead subhead--dark" style="color: #ffffff">
+            Hello There
+          </h3>
+          <h1 class="display-1 display-1--light">THIS IS ABOUT US</h1>
           <p style="font-size: 2rem; color: #fff">
             Social Conclave is a unique national conference wherein the
             delegates from all over the country will assemble to examine the
@@ -176,52 +179,9 @@
           <h5 style="color: white">Lives Impacted</h5>
         </div>
       </div>
-      <!--<div class="about__line"></div>-->
     </section>
-    <!-- /Slide2: About -->
 
-    <!-- Slide3: Blog -->
-    <section id="blogs" class="s-services">
-      <div class="row section-header has-bottom-sep" data-aos="fade-up">
-        <div class="col-full">
-          <!-- <h3 class="subhead">What We Do</h3> -->
-          <h1 class="display-2">The Conclave Blog</h1>
-        </div>
-      </div>
-      <div
-        class="row services-list block-1-2 block-tab-full containerblogs"
-        id="remblock"
-      >
-        {% for allblog in allblogs %}
-
-        <div class="col-block card" data-aos="fade-up">
-          <div class="card__header">
-            <img
-              src="{% static 'images/' %}{{allblog.introimage}}"
-              class="card__image"
-              width="600"
-            />
-          </div>
-          <div class="card__body">
-            <h4>{{allblog.shortTitle}}</h4>
-            <p>{{allblog.introPara}}</p>
-            <div class="card__footer">
-              <a href="blogs/{{allblog.slug}}" target="_blank">Read Article</a>
-            </div>
-          </div>
-        </div>
-
-        {% endfor %}
-      </div>
-
-      <div class="home-content__buttons dark" style="text-align: center">
-        <a href="{% url 'blogs:allblog' %}" class="btn btn--stroke">
-          View All Blogs
-        </a>
-      </div>
-    </section>
-    <!-- /Slide3: Blog -->
-
+    <!-- Glimpse -->
     <section id="works" class="s-works">
       <div class="intro-wrap">
         <div
@@ -364,6 +324,7 @@
       </div>
     </section>
 
+    <!-- Affiliations -->
     <section id="clients" class="s-clients">
       <div class="row section-header" data-aos="fade-up">
         <div class="col-full">
@@ -495,15 +456,13 @@
                 refunds to delegations/delegates that choose not to attend the
                 conference or one or more of its events.<br />
               </p>
-              <!-- <div class="testimonials__info">
-                <span class="testimonials__name"></span>
-              </div> -->
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Contact Us -->
     <section id="contact" class="s-contact">
       <div class="overlay"></div>
       <div class="row section-header" data-aos="fade-up">
@@ -596,12 +555,7 @@
         <div class="contact-secondary">
           <div class="contact-info">
             <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
-            <!-- <div class="cinfo">
-                        <h5>POORVA CHADHA</h5>
-                        <p>
-                            <a href="tel:+918828467640" style="color: rgba(255, 255, 255, 0.4);">+91-8828467640</a><br>poorvachadha.nmims@gmail.com
-                        </p>
-                    </div> -->
+
             <div class="cinfo-footer">
               <h5>ADVAIT UDAYABHANU</h5>
               <p><a href="tel:+919987729634">+91-9987729634</a><br /></p>
@@ -628,124 +582,9 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="row footer-main">
-        <div class="col-four tab-full left footer-subscribe">
-          <h4>Have questions?</h4>
-          <p>Feel free to reach out to us! We're happy to discuss on it.</p>
-          <ul class="contact-social">
-            <li>
-              <a href="https://instagram.com/social.conclave"
-                ><i class="fab fa-instagram" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://wa.me/+919987729634"
-                ><i class="fab fa-whatsapp" aria-hidden="true"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-three tab-full right footer-desc">
-          <div class="footer-log"></div>
-          <h4>Links</h4>
-          <ul>
-            <li><a class="smoothscroll" href="#home">Home</a></li>
-            <li>
-              <a href="{% url 'main:agendas' %}" title="agendas">Agendas</a>
-            </li>
-            <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="col-five tab-full right footer-subscribe">
-          <!--  -->
-          <div class="cinfo-footer">
-            <h5>ADVAIT UDAYABHANU</h5>
-            <p><a href="tel:+919987729634">+91-9987729634</a><br /></p>
-          </div>
-          <div class="cinfo-footer">
-            <h5>AASHIR IBRAHIM</h5>
-            <p><a href="tel:+919769328926">+91-9769328926</a><br /></p>
-          </div>
-        </div>
-      </div>
-      <div class="row footer-bottom">
-        <div class="col-twelve">
-          <div class="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-              <i class="icon-arrow-up" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- /Footer -->
-
-    <!--Preloader-->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button
-              class="pswp__button pswp__button--close"
-              title="Close (Esc)"
-            ></button>
-            <button
-              class="pswp__button pswp__button--share"
-              title="Share"
-            ></button>
-            <button
-              class="pswp__button pswp__button--fs"
-              title="Toggle fullscreen"
-            ></button>
-            <button
-              class="pswp__button pswp__button--zoom"
-              title="Zoom in/out"
-            ></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
-          >
-            <div class="pswp__share-tooltip"></div>
-          </div>
-          <button
-            class="pswp__button pswp__button--arrow--left"
-            title="Previous (arrow left)"
-          ></button>
-          <button
-            class="pswp__button pswp__button--arrow--right"
-            title="Next (arrow right)"
-          ></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__center"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="preloader">
-      <div id="loader">
-        <div class="scpreloader">
-          <img src="{% static 'images/sclogo.png' %}" style="width: 200px" />
-        </div>
-      </div>
-    </div>
-    <!--Preloader-->
+    {% include '../components/footer.html' %}
+    <!-- Preloader -->
+    {% include '../components/preloader.html' %}
 
     <script
       data-cfasync="false"
