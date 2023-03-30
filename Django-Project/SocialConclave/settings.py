@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'core.apps.CoreConfig',
     'blogs.apps.BlogsConfig',
-    'register.apps.RegisterConfig',
     'phonenumber_field',
     'crispy_forms',
     'import_export',
@@ -131,6 +130,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+GOOGLE_API_KEY = 'AIzaSyBG_2XSi0J7f4ibai5rDUgGC5wpNg255yc'
+BASE_COUNTRY = 'IN'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
